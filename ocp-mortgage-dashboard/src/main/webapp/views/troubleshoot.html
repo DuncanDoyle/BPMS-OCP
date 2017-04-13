@@ -26,15 +26,15 @@
         <tr>
             <td>{{item["id"]}}</td>
             <td>{{item["parameters"]["NodeName"]}}</td>
-            <td>{{item["processInstanceI  d"]}}</td>
+            <td>{{item["processInstanceId"]}}</td>
             <td>{{item["containerId"]}}</td>
             <td>{{item["parameters"]["errorStack"] | limitTo: 800 }}</td>
             <td>
                 <button
-                        ng-show="item['task-status'] == 'Ready'"
+                        ng-show="item['state'] == '0'"
                         ng-class="{'btn': true, 'btn-primary': true, disabled: taskInProgress}"
                         type="button"
-                        ng-click="claimTask(item['task-id'])">
+                        ng-click="claimTask(item['id'])">
                     Claim
                 </button>
 
