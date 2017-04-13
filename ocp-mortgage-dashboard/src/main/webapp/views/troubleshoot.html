@@ -31,7 +31,7 @@
             <td>{{item["parameters"]["errorStack"] | limitTo: 800 }}</td>
             <td>
                 <button
-                        ng-show="item['state'] == '0'"
+                        ng-show="item['state'] == 0"
                         ng-class="{'btn': true, 'btn-primary': true, disabled: taskInProgress}"
                         type="button"
                         ng-click="claimTask(item['id'])">
