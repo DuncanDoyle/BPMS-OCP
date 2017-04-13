@@ -11,6 +11,8 @@ angular.module('app')
 
             function fetchTasks() {
                 $http.get("service/finance/tasks").success(function (data) {
+                    console.log("Finance tasks.");
+                    console.log(data);
                     $scope.tasks = data;
                 });
             }

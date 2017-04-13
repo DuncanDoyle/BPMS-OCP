@@ -11,6 +11,8 @@ angular.module('app')
 
             function fetchItems() {
                 $http.get("service/troubleshoot/list").success(function (data) {
+                    console.log("Troubleshoot tasks.");
+                    console.log(data);
                     $scope.items = data;
                 });
             }

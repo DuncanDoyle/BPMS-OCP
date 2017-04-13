@@ -39,8 +39,8 @@
             <td>{{process["id"]}}</td>
             <td>{{process["processId"]}}</td>
             <td>{{process["containerId"]}}</td>
-            <td>{{consts.PROCESS_STATE[process["process-instance-state"]]}}</td>
-            <td>{{process["start-date"] | date:'MM-dd-yyyy HH:mm:ss Z'}}</td>
+            <td>{{consts.PROCESS_STATE[process["state"]]}}</td>
+            <td>{{process["date"] | date:'MM-dd-yyyy HH:mm:ss Z'}}</td>
         </tr>
         </tbody>
     </table>
@@ -61,11 +61,11 @@
 
         <tbody ng-repeat="workItem in workItems">
         <tr>
-            <td>{{workItem["work-item-id"]}}</td>
-            <td>{{workItem["work-item-name"]}}</td>
-            <td>{{workItem["process-instance-id"]}}</td>
-            <td>{{workItem["work-item-params"]["GroupId"]}}</td>
-            <td>{{workItem["work-item-params"]["NodeName"]}}</td>
+            <td>{{workItem["id"]}}</td>
+            <td>{{workItem["name"]}}</td>
+            <td>{{workItem["processInstanceId"]}}</td>
+            <td>{{workItem["parameters"]["GroupId"]}}</td>
+            <td>{{workItem["parameters"]["NodeName"]}}</td>
         </tr>
         </tbody>
     </table>

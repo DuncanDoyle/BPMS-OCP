@@ -11,6 +11,8 @@ angular.module('app')
 
             function fetchTasks() {
                 $http.get("service/broker/dataCorrectionTasks").success(function (data) {
+                    console.log("Data correction tasks.");
+                    console.log(data);
                     $scope.tasks = data;
                 });
             }

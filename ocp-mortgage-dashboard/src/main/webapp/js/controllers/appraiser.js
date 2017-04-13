@@ -11,7 +11,9 @@ angular.module('app')
 
             function fetchTasks() {
                 $http.get("service/appraiser/tasks").success(function (data) {
-                    $scope.tasks = data;
+                    console.log("Appraiser tasks.");
+                    console.log(data);
+                  $scope.tasks = data;
                 });
             }
 
