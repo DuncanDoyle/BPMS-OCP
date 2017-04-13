@@ -6,6 +6,8 @@ angular.module('app')
         $scope.consts = Constants;
 
         $http.get("service/home/processes").success(function (data) {
+            console.log("Retrieved data.");
+            console.log(data);
             $scope.processes = data;
         });
 
