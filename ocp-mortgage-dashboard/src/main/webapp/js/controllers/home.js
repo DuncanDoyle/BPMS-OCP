@@ -3,6 +3,7 @@
 angular.module('app')
     .controller("HomeCtrl", ['$scope', '$http', 'Constants', function ($scope, $http, Constants) {
 
+        $scope.data = {};
         $scope.consts = Constants;
 
         $http.get("service/home/processes").success(function (data) {
