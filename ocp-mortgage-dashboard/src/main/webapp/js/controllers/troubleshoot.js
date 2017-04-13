@@ -16,4 +16,28 @@ angular.module('app')
                     $scope.items = data;
                 });
             }
-        }]);
+
+            $scope.claimTask = function (taskId) {
+                $http.post("service/broker/claimTask", taskId).then(
+                    function successCallback(data) {
+                        $scope.successMessage = "Task claimed Successfully";
+                        $scope.successVisible = true;
+                        fetchTasks();
+                        $timeout(function () {
+                            $scope.successVisible = false;
+                            $scope.successMessage = "";
+                        }, 2000);
+                    },
+                    function errorCallback(data) {
+                        $scope.errorMessage = "Error occurred while attempting to claim task";
+                        $scope.errorVisible = true;
+                        fetchTasks();
+                        console.log("ERROR: " + JSON.stringify({data: data}));
+                        $timeout(function () {
+                            $scope.errorVisible = false;
+                            $scope.errorMessage = "";
+                        }, 2000);
+                    });
+            };
+
+      }]);
