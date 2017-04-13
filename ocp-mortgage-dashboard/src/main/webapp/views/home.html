@@ -11,6 +11,12 @@
         </tr>
         </thead>
 
+<script>
+console.log(angular.toJson($scope.processes.result));
+</script>
+
+
+
         <tbody ng-repeat="process in processes.result">
         <tr>
             <td>{{process["container-id"]}}</td>
