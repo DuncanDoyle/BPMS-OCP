@@ -25,10 +25,10 @@
         <tbody ng-repeat="item in items">
         <tr>
             <td>{{item["id"]}}</td>
-            <td>{{item["work-item-params"]["nodeName"]}}</td>
-            <td>{{item["process-instance-id"]}}</td>
-            <td>{{item["container-id"]}}</td>
-            <td>{{item["work-item-params"]["errorStack"] | limitTo: 800 }}</td>
+            <td>{{item["parameters"]["NodeName"]}}</td>
+            <td>{{item["processInstanceI  d"]}}</td>
+            <td>{{item["containerId"]}}</td>
+            <td>{{item["parameters"]["errorStack"] | limitTo: 800 }}</td>
             <td>
                 <button
                         ng-show="item['task-status'] == 'Ready'"
