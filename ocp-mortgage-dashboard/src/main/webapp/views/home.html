@@ -15,12 +15,12 @@
             <th>Process Version</th>
         </tr>
         </thead>
-        <tbody ng-repeat="process in processes.result">
+        <tbody ng-repeat="process in processes">
         <tr>
             <td>{{process["containerId"]}}</td>
             <td>{{process["name"]}}</td>
-            <td>{{process["process-id"]}}</td>
-            <td>{{process["process-version"]}}</td>
+            <td>{{process["id"]}}</td>
+            <td>{{process["version"]}}</td>
         </tr>
         </tbody>
     </table>
