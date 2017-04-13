@@ -8,7 +8,7 @@ angular.module('app')
         $http.get("service/home/processes").success(function (data) {
             console.log("Retrieved data.");
             console.log(data);
-            $scope.processes = data;
+            $scope.processes.result = data;
         });
 
         $http.get("service/home/running").success(function (data) {
